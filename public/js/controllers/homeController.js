@@ -51,8 +51,8 @@ materialToDo.controller('homeController', function($scope,$state,$mdSidenav,$mdD
         }
 
         $scope.getTasksBy_uId = function () {
-            $http.post((basePath+'/getTasks'),$scope.currentUser)
-                .success(function (data) {
+            $http.post('/getTasks',$scope.currentUser)
+                .then(function (data) {
                     console.log(data);
                     $scope.remaining=0;
                     $scope.todos = data.resObj;
@@ -76,7 +76,7 @@ materialToDo.controller('homeController', function($scope,$state,$mdSidenav,$mdD
         $scope.currentStateOfTasks = function(index){
             //actionService.clickedTask.set($scope.todos[index])
             $http.post((basePath+'/updateToDo'),$scope.todos[index])
-                .success(function (data) {
+                .then(function (data) {
                     console.log(data);
                     $scope.remaining=0;
                     for(var i=0;i<$scope.todos.length;i++){
@@ -128,7 +128,7 @@ materialToDo.controller('homeController', function($scope,$state,$mdSidenav,$mdD
                 $scope.taskToDelete = actionService.clickedTask.get();
 
                 $http.post((basePath+'/deleteTodo'),$scope.taskToDelete)
-                    .success(function(data){
+                    .then(function(data){
                         console.log(data);
                         $mdDialog.hide();
                         $scope.getTasksBy_uId();

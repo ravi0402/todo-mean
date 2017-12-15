@@ -33,7 +33,7 @@ materialToDo.controller('signInController', function(userService,$scope,$mdToast
         $scope.isSignInClicked=true;
         console.log($scope.user);
         $http.post((basePath+'/signIn'),$scope.user)
-            .success(function(data){
+            .then(function(data){
                 if(data.status==true){
                     console.log(data);
                     userService.UserUid.set(data.resObj);
@@ -54,7 +54,7 @@ materialToDo.controller('signInController', function(userService,$scope,$mdToast
                     }
                 }
             })
-            .error(function (err) {
+            .catch(function (err) {
                 console.log(err);
                 $scope.toastMessage = 'Error in Signing In';
                 $scope.showSimpleToast()

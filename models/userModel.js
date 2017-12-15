@@ -4,7 +4,7 @@
 
 var mongoose = require("mongoose");
 var q = require("q");
-var db = mongoose.connect("<<- replace your mongo db key here ->>", function(err){
+var db = mongoose.connect("mongodb://localhost/todoss", function(err){
     if(err){
         console.log("Error in connecting check your db key");
         console.log(err);

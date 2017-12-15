@@ -20,13 +20,13 @@ materialToDo.controller('signUpController', function($scope,$http,basePath,$loca
             $scope.isSignUpClicked=true;
             console.log($scope.user,$scope.cPassword);
             $http.post((basePath+'/signUp'),$scope.user)
-                .success(function(data){
+                .then(function(data){
                     console.log(data);
                     $scope.toastMessage = 'User Created Successfully';
                     $scope.showSimpleToast();
                     $location.path( "/signIn" );
                 })
-                .error(function (err) {
+                .catch(function (err) {
                     console.log(err);
                     $scope.toastMessage = 'Error in User Creation'+err;
                     $scope.showSimpleToast()

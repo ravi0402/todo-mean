@@ -14,11 +14,11 @@ materialToDo.controller('editTaskController', function($scope,$mdDialog,actionSe
 
     $scope.done = function () {
         $http.post((basePath+'/editTodo'),$scope.taskToEdit)
-            .success(function(data){
+            .then(function(data){
                 console.log(data);
                 $mdDialog.hide();
             })
-            .error(function(err){
+            .catch(function(err){
                 console.log(err)
             });
     };

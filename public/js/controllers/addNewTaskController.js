@@ -16,10 +16,10 @@ materialToDo.controller('addNewTaskController', function(userService,basePath,$s
     $scope.done = function () {
         console.log($scope.newTask);
         $http.post((basePath+'/saveNewTodo'),$scope.newTask)
-            .success(function(data){
+            .then(function(data){
                 $mdDialog.hide();
             })
-            .error(function(err){
+            .catch(function(err){
                 console.log(err)
 
             });
