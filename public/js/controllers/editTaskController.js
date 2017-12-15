@@ -1,6 +1,3 @@
-/**
- * Created by M.JUNAID on 2015-03-12.
- */
 
 materialToDo.controller('editTaskController', function($scope,$mdDialog,actionService,$http,basePath) {
 

@@ -1,6 +1,3 @@
-/**
- * Created by M.JUNAID on 2015-04-03.
- */
 
 var mongoose = require("mongoose");
 var q = require("q");

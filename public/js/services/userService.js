@@ -1,6 +1,3 @@
-/**
- * Created by M.JUNAID on 2015-03-29.
- */
 
 materialToDo.factory('userService',function(){
     var _signedInUserUid = '';

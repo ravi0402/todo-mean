@@ -1,8 +1,8 @@
 {
-  "name": "Material-ToDo",
-  "homepage": "https://github.com/mjunaidsalaat/Material-ToDo",
+  "name": "todo-mean",
+  "homepage": "https://github.com/ravi0402/todo-mean.git",
   "authors": [
-    "M. Junaid Salaat <mjunaidsalaat@gmail.com>"
+    "Ravi Sharnagat <ravi.sharnagat@gmail.com>"
   ],
   "description": "To Do App",
   "main": "app.js",

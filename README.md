@@ -1,13 +1,11 @@
-# Material-ToDo
 
-The MEAN Stack ToDo App on the New Angular Material Design.
+
+Clevero Task Management Todo App built using MEAN Stack.
 
 - Sign Up
 - Sign In
-- Start.. 
-- Write Edit Delete and Check If Complete..
+- Users can add Tasks in the list and also specify their ‘Due Date’, add ‘Label’ and set the ‘Status’ of the tasks.
 
 
-# Live Project Demo - https://materialtodo.herokuapp.com/
 
 Thanks.

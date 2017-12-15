@@ -4,14 +4,12 @@ var router = express.Router();
 var userModel = require("../models/userModel.js");
 var toDoModel = require("../models/toDoModel.js");
 
-/* GET home page. */
 
 router.get('*', function(req, res, next) {
   res.render('index', {});
 });
 
 
-/* POST home listings. */
 
 router.post('/signUp',function(req,res){
   console.log(req.body);

@@ -1,6 +1,4 @@
-/**
- * Created by M.JUNAID on 2015-03-09.
- */
+
 
 materialToDo.controller('homeController', function($scope,$state,$mdSidenav,$mdDialog,$mdBottomSheet,$timeout,actionService,$mdToast,$http,userService,basePath){
 

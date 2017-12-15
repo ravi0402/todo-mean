@@ -1,6 +1,3 @@
-/**
- * Created by M.JUNAID on 2015-03-09.
- */
 
 materialToDo.controller('signInController', function(userService,$scope,$mdToast,$http,basePath,$state){
 
@@ -37,10 +34,13 @@ materialToDo.controller('signInController', function(userService,$scope,$mdToast
                 if(data.status==true){
                     console.log(data);
                     userService.UserUid.set(data.resObj);
+                    console.log('1');
                     localStorage.setItem('toDoUser',JSON.stringify(data.resObj));
+                    console.log('2');
                     $scope.toastMessage = 'User Sign In Successfully';
+                    console.log('3');
                     $scope.showSimpleToast();
-                    $scope.changeState('home')
+                    $scope.changeState('home');
                 }else{
                     if(data.err=="Username not found"){
                         $scope.toastMessage = data.err;

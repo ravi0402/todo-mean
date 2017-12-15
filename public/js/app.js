@@ -1,21 +1,14 @@
-/**
- * Created by M.JUNAID on 2015-03-09.
- */
+
 var materialToDo = angular.module('materialToDo', ['ngMaterial','ui.router']);
 
-materialToDo.constant("basePath", "https://materialtodo.herokuapp.com");
+materialToDo.constant("basePath", "http://35.196.59.232:7000");
 
 materialToDo.config(function($stateProvider,$urlRouterProvider,$locationProvider,$mdThemingProvider){
 
     $mdThemingProvider
         .theme('docs-dark', 'default')
         .primaryPalette('yellow');
-        //.dark()
-        //.theme('default')
-        //.primaryPalette('yellow')
-        //.accentPalette('pink');
-        //.warnPalette('red')
-        //.backgroundPalette('blue');
+        
 
     $stateProvider
       .state('signUp',{
